@@ -1,0 +1,9 @@
+3.1-Liste chaînée : La recherche se fait en balayant toute la liste jusqu’à trouver l’élément (ou pas). Elle est donc linéaire 
+𝑂(𝑛),ce qui est peu efficace pour une bibliotheque contenant un grand nombre d’ouvrages.
+Table de hachage : La recherche se fait en accédant directement à l’index haché (O(1) en moyenne). Si des collisions existent, la recherche devient plus lente (au pire O(n)), mais avec un bon choix de fonction de hachage, on obtient une complexité très basse en pratique.
+donc La table de hachage est la meilleure structure pour la recherche d’un ouvrage.recherche en O(1) contre O(n) pour la liste chaînée.
+
+3.2-en modifiant le main de la table de hachage : Une table plus grande réduit les risques de collisions, améliorant ainsi la recherche.
+ce qui entraine que l’accès aux éléments suit une complexité moyenne de O(1) au lieu de O(n) en cas de forte surcharge.
+Donc  Une taille bien ajustée permet d’optimiser le compromis entre rapidité et consommation mémoire.
+

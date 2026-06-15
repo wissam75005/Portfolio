@@ -1,0 +1,301 @@
+
+/*couleurs pricipales du site*/
+:root {
+  --bg-dark: #080b12;
+  --accent:	#1ba9d8;
+  --accent-soft: rgba(27, 169, 216, 0.18);
+
+}
+/*defilement fluide entre les sections*/
+html {
+  scroll-behavior: smooth;
+}
+/*theme generale du site*/
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #1ba9d8;
+}
+
+/*menu burger*/
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+
+/*barre de navigation*/
+.navbar {
+  backdrop-filter: blur(10px);
+  background: rgba(15, 23, 42, 0.9) !important;
+}
+
+/* Section acceuil */
+.hero {
+  min-height: 100vh;
+  padding-top: 90px;
+  padding-bottom: 60px;
+  background: radial-gradient(circle at top left, #1f2937, #020617);
+  color: #f9fafb;
+}
+
+/* Text avec la couleur principale */
+.text-accent {
+  color: var(--accent) !important;
+}
+
+/* Bouton principal */
+.btn-accent {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #0f172a;
+  font-weight: 600;
+}
+
+
+/*effet au survol du bouton*/
+
+.btn-accent:hover {
+  background: #080c44;
+  border-color: #080c44;
+  color: #020617;
+}
+
+/* Carte profil */
+.profile {
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: 1.25rem;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.8);
+}
+
+
+
+
+.profile-initials {
+  letter-spacing: 0.05em;
+}
+
+
+/*espacement entre les sections*/
+.section {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.section-title h2 {
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+}
+
+.section-title h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin: 10px auto 0;
+  background: var(--accent);
+  border-radius: 999px;
+}
+
+/* style des cartes */
+.card {
+  border-radius: 1.1rem;
+}
+
+
+/*effet a survol des cartes */
+.card:hover {
+  transform: translateY(-3px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 18px 30px rgba(15, 23, 42, 0.35);
+
+}
+
+/* barres de progression */
+.progress {
+  height: 6px;
+  border-radius: 999px;
+  background-color: #e5e7eb;
+}
+
+.progress-bar {
+  background: linear-gradient(90deg, var(--accent), #6366f1);
+}
+
+/* lignes verticales de la timeline */
+.timeline {
+  position: relative;
+  padding-left: 25px;
+  border-left: 2px solid #e5e7eb;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -7px;
+  top: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid var(--accent);
+}
+
+.timeline-content {
+  padding-left: 10px;
+}
+
+/* Projets */
+.project {
+  background: #f9fafb;
+}
+
+/* Section contact */
+.contact{
+  background: #e5e7eb;
+}
+
+/* Footer */
+footer {
+  color: #fff;
+}
+
+/* Liens accent */
+a.text-accent {
+  text-decoration: none;
+}
+
+a.text-accent:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 991.98px) {
+  .hero {
+    text-align: center;
+  }
+
+  .hero .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+/*mode clair pour mon affichage*/
+body.light {
+  background: #f8fafc;
+  color: #020617;
+}
+
+body.light .section {
+  background: #f8fafc;
+}
+
+body.light .card {
+  background: #ffffff;
+  color: #020617;
+}
+
+body.light .navbar {
+  background: #ffffff !important;
+}
+
+body.light .navbar .nav-link,
+body.light .navbar-brand {
+  color: #020617 !important;
+}
+
+/* Mode sombre  de l'affichage*/
+body.dark {
+  background: #0f172a;
+  color: #f9fafb;
+}
+
+body.dark .section {
+  background: transparent;
+}
+
+body.dark .card {
+  background: rgba(15, 21, 27, 0.95);
+  color: #f9fafb;
+}
+
+/* Bouton pour changer de mode */
+#themeToggle {
+  cursor: pointer;
+}
+
+
+body.light #parcours,
+body.light #parcours * {
+  color: #0f172a;
+}
+
+body.light #parcours .text-muted,
+body.light #parcours .small.text-muted {
+  color: #1ba9d8 !important;
+}
+
+
+body.light #parcours .timeline {
+  border-left: 2px solid #cbd5e1;
+}
+
+body.light #parcours .timeline-dot {
+  background: #ffffff;
+  border: 2px solid #022f43; 
+}
+
+/* Fond bleu pour À propos + Contact */
+#apropos,
+#contact {
+  background: #022f43 !important;
+}
+
+/* Texte lisible sur fond bleu */
+#apropos,
+#contact,
+#apropos .text-muted,
+#contact .text-muted {
+  color: #ffffff !important;
+}
+
+/* Icônes des projets : */
+body.dark .project i.bi {
+  color: #ffffff !important; /* icône reste blanche */
+  background: rgba(27, 169, 216, 0.22); 
+  border: 1px solid rgba(27, 169, 216, 0.45);
+  padding: 0.45rem 0.55rem;
+  border-radius: 0.75rem;
+}
+/* Logos des compétences : petits, ronds, propres */
+.skill-label img {
+  width: 28px;
+  height: 28px;
+  object-fit: cover;
+  border-radius: 50%;              /* forme ronde */
+  background: #ffffff;             /* fond blanc */
+  padding: 4px;                    /* espace autour du logo */
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+/* Mode sombre : fond légèrement bleu */
+body.dark .skill-label img {
+  background: rgba(27, 169, 216, 0.25);
+  border: 1px solid rgba(27, 169, 216, 0.45);
+  
+}
+.skill-row:hover .skill-label img {
+  transform: scale(1.08);
+  transition: transform 0.2s ease;
+}
+
+
+
+
+
+
